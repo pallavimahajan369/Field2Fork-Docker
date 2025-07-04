@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Razorpay Checkout</title>
+    <!-- Include Razorpay checkout script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body>
+    <h2>Test Razorpay Payment</h2>
+    <button id="payBtn">Pay Now</button>
+    <script>
+      // Replace these dummy values with real test values from your backend or Razorpay Dashboard
+      const options = {
+        "key": "rzp_test_kQx4rr9DSjnBdc",  // Use your Razorpay test API key here
+        "amount": 50000,            // Amount in paise (50000 = ₹500.00)
+        "currency": "INR",
+        "name": "Your Company Name",
+        "description": "Test Transaction",
+        // This order_id should come from your backend when you create a Razorpay order.
+        // For testing, you can hard-code a valid order id from Razorpay test mode if available.
+        "order_id": "order_Pso6HRaBCGiOPF",  
+        "handler": function (response) {
+          // This function is called after a successful payment.
+          alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+          console.log("Razorpay Payment ID:", response.razorpay_payment_id);
+          console.log("Razorpay Order ID:", response.razorpay_order_id);
+          console.log("Razorpay Signature:", response.razorpay_signature);
+          // You would typically call your backend API to verify payment here.
+        },
+        "prefill": {
+          "name": "John Doe",
+          "email": "john.doe@example.com",
+          "contact": "9999999999"
+        },
+        "notes": {
+          "address": "Test Address"
+        },
+        "theme": {
+          "color": "#3399cc"
+        }
+      };
+
+      document.getElementById('payBtn').onclick = function(e) {
+        e.preventDefault();
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+      }
+    </script>
+  </body>
+</html>

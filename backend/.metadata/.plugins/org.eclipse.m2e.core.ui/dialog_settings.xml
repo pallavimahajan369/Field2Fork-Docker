@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\ajmah\OneDrive\Desktop\CDAC PROJECT\Field2Fork\backend"/>
+			<item value="C:\Users\Vaibhavi\OneDrive\Desktop\Field2fork-Project\Field2Fork\backend"/>
+			<item value="D:\SUNBEAM\CDAC_PROJECT\Field2Fork\backend"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="yes"/>
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>
