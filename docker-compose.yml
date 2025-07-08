@@ -6,8 +6,8 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 123Pass@
-      MYSQL_DATABASE: field2fork1
+      MYSQL_ROOT_PASSWORD: G3IJMe1Lfe
+      MYSQL_DATABASE: sql12788868
     ports:
       - "3307:3306"
     volumes:
@@ -21,9 +21,9 @@ services:
     depends_on:
       - mysql
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/field2fork1
+      SPRING_DATASOURCE_URL: jdbc:mysql://turntable.proxy.rlwy.net:22155/railway
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: 123Pass@
+      SPRING_DATASOURCE_PASSWORD: nXfBqTUWHvAsQaEzDUzmCHloFPPVKwuT
     ports:
       - "8080:8080"  # ✅ Fixed indentation
 
